@@ -1,0 +1,19 @@
+import random
+
+def generate_post(topic):
+    templates = [
+        f"🔥 Latest update about {topic}! Stay tuned.",
+        f"Want to know about {topic}? Here's something interesting!",
+        f"🚀 Exploring {topic} today!"
+    ]
+
+    return random.choice(templates)
+
+
+def generate_hashtags(topic):
+    return [
+        f"#{topic}",
+        "#Trending",
+        "#SocialMedia",
+        "#AI"
+    ]
