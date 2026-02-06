@@ -1,0 +1,14 @@
+async function generatePost() {
+
+    let topic = document.getElementById("topic").value;
+
+    let response = await fetch(
+        `http://127.0.0.1:8000/generate_post?topic=${topic}`,
+        { method: "POST" }
+    );
+
+    let data = await response.json();
+
+    document.getElementById("result").innerText =
+        data.post + " " + data.hashtags.join(" ");
+}
